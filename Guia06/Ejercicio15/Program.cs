@@ -5,70 +5,78 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Ejercicio15
-{   /*
-     * 15- Dados el nombre, salario y puesto de un empleado, calcule y despliegue el 
-     * Bono Navideño en dólares. Bonos->Gerente 30% Supervisor 20% Asistente 15% 
-     * Secretaria 10% Ordenanza 5%.
+{
+    /*
+     * 15- Dados el nombre, salario y puesto de un empleado, calcule y despliegue
+     * el Bono Navideño en dólares. Bonos->Gerente 30% Supervisor 20% Asistente 15% 
+     * Secretaria 10% Ordenanza 5%
      */
     internal class Program
-    {       
-            // declaracion de constantes
-            const double GERENTE = 0.3, SUPERVISOR = 0.25, ASISTENTE = 0.15;
-            const double SECRETARIA = 0.10, ORDENANZA = 0.05;
-            static void Main(string[] args)
-            {
-                // declaracion de variables
-                string nombre;
-                int opcion;
-                double salario, bono;
+    {
+        static void Main(string[] args)
+        {
+            // declaracion de variables
+            string nombre, puesto;
+            double salario, bono;
 
-                // entrada de datos
-                Console.Write("Ingrese su nombre completo: ");
-                nombre = Console.ReadLine();
-                Console.Write("Ingrese el valor de su salario: $");
-                salario = double.Parse(Console.ReadLine());
-                Console.WriteLine("\nElija la opcion acuerdo a su puesto de trabajo.\n 1- Gerente\n 2- Supervisor\n 3- Asistente\n 4- Secretaria\n 5- Ordenanza");
-                opcion = int.Parse(Console.ReadLine());
+            // entrada de datos
+            nombre = LeerTexto("Ingrese el nombre del empleado: ");
+            salario = LeerDecimal("Ingrese el salario del empleado: $");
+            puesto = LeerTexto("Ingrese el puesto del empleado (Gerente, Supervisor, Asistente, Secretaria, Ordenanza):");
+            bono = CalcularBono(puesto, salario);
 
-                // proceso y salida de datos
-                bono = CalcularBono(salario, opcion);
-                if (salario > 0 && (opcion >= 1 && opcion <= 5))
-                {   
-                    Console.WriteLine("\n{0} su bono navideño es de {1:C} dolares", nombre, bono);
-                }
-                else
-                {
-                    Console.WriteLine("\nNo se pudo calcular su bono navideño. Vuelva a intentarlo");
-                }
-                Console.ReadKey();
-            }
+            // salida de datos
+            MostrarResultado(nombre, puesto, bono);
+        }
 
-            // Metodo para calcular el bono dependiendo del tipo de empleado
-            static double CalcularBono(double salario, double opcion)
-            {
-                double bono = 0;
-                if (opcion == 1)
-                {
-                    bono = salario * GERENTE;
-                }
-                else if (opcion == 2)
-                {
-                    bono = salario * SUPERVISOR;
-                }
-                else if (opcion == 3)
-                {
-                    bono = salario * ASISTENTE;
-                }
-                else if (opcion == 4)
-                {
-                    bono = salario * SECRETARIA;
-                }
-                else if (opcion == 5)
-                {
-                    bono = salario * ORDENANZA;
-                }
-                return bono;
-            }
-       
+        /// <summary>
+        /// Solicita al usuario una entrada de texto (nombre o puesto).
+        /// </summary>
+        static string LeerTexto(string mensaje)
+        {
+            Console.WriteLine(mensaje);
+            return Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Solicita al usuario un número decimal (salario).
+        /// </summary>
+        static double LeerDecimal(string mensaje)
+        {
+            Console.Write(mensaje);
+            return double.Parse(Console.ReadLine());
+        }
+
+        /// <summary>
+        /// Calcula el bono navideño según el puesto del empleado.
+        /// </summary>
+        static double CalcularBono(string puesto, double salario)
+        {
+            double porcentaje = 0;
+
+            // Estructura selectiva para determinar el porcentaje
+            if (puesto.ToLower() == "gerente")
+                porcentaje = 0.30;
+            else if (puesto.ToLower() == "supervisor")
+                porcentaje = 0.20;
+            else if (puesto.ToLower() == "asistente")
+                porcentaje = 0.15;
+            else if (puesto.ToLower() == "secretaria")
+                porcentaje = 0.10;
+            else if (puesto.ToLower() == "ordenanza")
+                porcentaje = 0.05;
+
+            return salario * porcentaje;
+        }
+
+        /// <summary>
+        /// Muestra el nombre, puesto y bono navideño del empleado.
+        /// </summary>
+        static void MostrarResultado(string nombre, string puesto, double bono)
+        {
+            Console.WriteLine($"\nEmpleado: {nombre}");
+            Console.WriteLine($"Puesto: {puesto}");
+            Console.WriteLine($"Bono Navideño: ${bono:0.00}");
+        }
     }
 }
