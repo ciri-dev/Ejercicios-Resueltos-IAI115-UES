@@ -9,7 +9,7 @@ namespace Ejercicio32
     internal class Program
     {
         /*
-         * 30- Desplegar por pantalla el producto de los primeros 10 números enteros negativos
+         * 32- Desplegar por pantalla el producto de los primeros 10 números enteros negativos
          */
         static void Main(string[] args)
         {
