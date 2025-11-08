@@ -10,8 +10,14 @@ Este repositorio contiene soluciones desarrolladas en **C#** para las guías pr�
 ## 📂 Guías disponibles
 
 El repositorio incluye ejercicios resueltos de las siguientes guías:
-- [Guía 03](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia03)
-- [Guía 04](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia04)
-- [Guía 05](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia05)
-- [Guía 06](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia06)
+- [Guía03 - Estructuras de Control Secuenciales](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia03)
+- [Guía04 - Metodología para Resolver Problemas](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia04)
+- [Guía05 - Modularidad](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia05)
+- [Guía06 - Estructuras Selectivas Simples y Dobles(if else)](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia06)
+- [Guía07 - Estructuras Selectivas Anidadas y Múltiples(switch)](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia07)
+- [Guía08 - Estructuras Repetitivas(for, while, do while)](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia08)
+- [Guía09 - Arreglo Unidimensionales: Arrays o Vectores](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia09)
+- [Guía10 - Arreglos Bidimensionales: Matrices](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia10)
+- [Guía11 - Cadenas de Caracteres(string) y Structs](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia11)
+- [Guía12 - Manejo de Archivos de Texto](https://github.com/Ciri-Dev/Ejercicios-Resueltos-IAI115-UES/tree/main/Guia12)
 
